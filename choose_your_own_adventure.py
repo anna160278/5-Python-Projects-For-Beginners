@@ -1,40 +1,41 @@
-name = input("Type your name: ")
-print("Welcome", name, "to this adventure!")
+name = input("Ваше имя: ")
+print("Привет! " + name + "! Добро пожаловать в игру - приключение!")
 
 answer = input(
-    "You are on a dirt road, it has come to an end and you can go left or right. Which way would you like to go? ").lower()
+    "Вы идёте по извилистой дороге 🚶‍♂️, встретили развилку ❌, вы можете идти влево 👈 или вправо👉. "
+    "\nКаким путем вы хотели бы пойти❓ \n\tВведите (вправо/влево)_ ").lower()
 
-if answer == "left":
+if answer == "влево":
     answer = input(
-        "You come to a river, you can walk around it or swim accross? Type walk to walk around and swim to swim accross: ")
+        "Вы подходите к реке ♒, можете ее обойти ↪ или переплыть 🏊🏼‍♂️❓ \n\tВведите (обойти или переплыть)_ ")
 
-    if answer == "swim":
-        print("You swam acrross and were eaten by an alligator.")
-    elif answer == "walk":
-        print("You walked for many miles, ran out of water and you lost the game.")
+    if answer == "переплыть":
+        print("Вы плыли через реку, вас съел крокодил 🐊! 😢")
+    elif answer == "обойти":
+        print("Вы прошли много километров, у вас кончилась вода 💧, и вы проиграли 😭.")
     else:
-        print('Not a valid option. You lose.')
+        print('Не допустимый вариант❌. Ты проиграл! 😭')
 
-elif answer == "right":
+elif answer == "вправо":
     answer = input(
-        "You come to a bridge, it looks wobbly, do you want to cross it or head back (cross/back)? ")
+        "Вы подходите к мосту 🌉, он выглядит шатким, вы хотите перейти 🔼 его или вернуться 🔙? \n\tВведите (перейти/вернуться)_ ")
 
-    if answer == "back":
-        print("You go back and lose.")
-    elif answer == "cross":
+    if answer == "вернуться":
+        print("Вы вернулись домой и проиграли! 😭")
+    elif answer == "перейти":
         answer = input(
-            "You cross the bridge and meet a stranger. Do you talk to them (yes/no)? ")
+            "Вы переходите мост и встречаете незнакомца 👨🏼. Вы будете говорить с ним? \n\tВведите (да/нет)_ ")
 
-        if answer == "yes":
-            print("You talk to the stanger and they give you gold. You WIN!")
-        elif answer == "no":
-            print("You ignore the stranger and they are offended and you lose.")
+        if answer == "да":
+            print("Вы говорите с незнакомцем, и он дает вам золото. Вы победили! 🤩💖😃")
+        elif answer == "нет":
+            print("Вы игнорируете незнакомца, и он обижается, и вы проигрываете. 😭")
         else:
-            print('Not a valid option. You lose.')
+            print('Не допустимый вариант❌. Ты проиграл! 😭')
     else:
-        print('Not a valid option. You lose.')
+        print('Не допустимый вариант❌. Ты проиграл! 😭')
 
 else:
-    print('Not a valid option. You lose.')
+    print('Не допустимый вариант❌. Ты проиграл! 😭')
 
-print("Thank you for trying", name)
+print("Спасибо за игру 🙏🏼, " + name + "! Заходи ещё! 😃")
